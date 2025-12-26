@@ -1,8 +1,8 @@
 {
   "name": "setup-rust",
-  "version": "0.0.0",
+  "version": "1.0.8",
   "private": true,
-  "description": "Setup rust",
+  "description": "Setup Rust by MeyouOSS",
   "main": "lib/main.js",
   "scripts": {
     "build": "tsc",

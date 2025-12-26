@@ -1,4 +1,4 @@
-# setup-rust - A actions to install rust (obviously)
+# Setup Rust by MeyouOSS - A actions to install rust (obviously)
 
 ## Options
 
@@ -18,18 +18,18 @@ name: Rust
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
 
 jobs:
   lint:
     name: Lint
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     steps:
       - name: Setup | Checkout
         uses: actions/checkout@v2
       - name: Setup | Rust
-        uses: ATiltedTree/setup-rust@v1
+        uses: MeyouOSS/ATiltedTree-setup-rust@v1.0.8
         with:
           rust-version: stable
           components: clippy
@@ -42,7 +42,7 @@ jobs:
       - name: Setup | Checkout
         uses: actions/checkout@v2
       - name: Setup | Rust
-        uses: ATiltedTree/setup-rust@v1
+        uses: MeyouOSS/ATiltedTree-setup-rust@v1.0.8
         with:
           rust-version: stable
       - name: Build | Compile
@@ -54,7 +54,7 @@ jobs:
         os:
           - ubuntu-latest
           - windows-latest
-          - macOS-latest
+          - macos-latest
         rust:
           - stable
           - beta
@@ -65,10 +65,9 @@ jobs:
       - name: Setup | Checkout
         uses: actions/checkout@v2
       - name: Setup | Rust
-        uses: ATiltedTree/setup-rust@v1
+        uses: MeyouOSS/ATiltedTree-setup-rust@v1.0.8
         with:
           rust-version: ${{ matrix.rust }}
       - name: Build | Compile
         run: cargo test
-
 ```
