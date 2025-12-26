@@ -21,7 +21,7 @@
     "rust",
     "setup"
   ],
-  "author": "ATiltedTree",
+  "author": "ATiltedTree, MeyouOSS",
   "license": "MIT",
   "dependencies": {
     "@actions/cache": "^4.0.3",

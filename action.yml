@@ -1,6 +1,6 @@
-name: Setup Rust
+name: Setup Rust by MeyouOSS
 description: Installs rust using rustup
-author: ATiltedTree
+author: ATiltedTree, MeyouOSS
 inputs:
   rust-version:
     description: The version to install
